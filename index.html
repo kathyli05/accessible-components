@@ -12,6 +12,7 @@
       <nav>
         <ul>
           <li><a href="#introduction">Introduction</a></li>
+          <li><a href="#applications">Applications Overview</a></li>
           <li><a href="#inputs">Input Interactions</a></li>
           <li><a href="#outputs">Output Feedback</a></li>
           <li><a href="#models">State Models</a></li>
@@ -278,7 +279,7 @@
                 be toggled; the label is not clickable, which limits efficiency
                 for users with motor disabilities. Drag-and-drop is only
                 available via mouse, with no equivalent on keyboard or touch.
-                Tabbing through tasks is inconsistent—focus disappears after
+                Tabbing through tasks is inconsistent - focus disappears after
                 some interactions. No way to access the custom right-click menu
                 using the keyboard, which creates a functionality gap for
                 non-mouse users.
@@ -347,7 +348,11 @@
                 option (checkbox + text) from top to bottom, but no way to go
                 back easily. No visual label highlight.
               </td>
-              <td>Poor.</td>
+              <td>
+                Reads out the entire label and then "unchecked" or "checked".
+                However, state changes are NOT narrated - only the initial state
+                is read out loud.
+              </td>
             </tr>
 
             <tr>
@@ -363,7 +368,12 @@
                 Focus order is fragmented. Can tab to checkbox and text, but
                 loses focus after task text; not all options are reachable.
               </td>
-              <td>Some screen reader announcements for task state</td>
+              <td>
+                Nearly impossible to use - could not change scren reader
+                attention to task, could not change focus. Had to close and
+                reopen window multiple times. When working, reads "Task list
+                ____, more options available, unselected".
+              </td>
             </tr>
             <tr>
               <td>Hades Settings</td>
@@ -381,7 +391,7 @@
                 Inconsistent. Navigation loops in some areas and skips others.
                 No visible outline on keyboard focus.
               </td>
-              <td>ur mom</td>
+              <td>Did not work; "no item in view".</td>
             </tr>
           </tbody>
         </table>
@@ -509,9 +519,9 @@
             My design addresses two accessibility gaps: the almost-hidden
             hover/focus indicator in Google Forms mouse/keyboard navigation and
             the lack of visual alignment between interactive areas and visual
-            feedback. This change solves the "mismatch" described by Kat
-            Holmes—there is a disconnect between the ability to interact with
-            the entire label row and the visual indicator that only appears on
+            feedback. This change solves the "mismatch" described by Kat Holmes
+            - there is a disconnect between the ability to interact with the
+            entire label row and the visual indicator that only appears on
             hover/focus, creating unnecessary precision challenges for users.
           </p>
 
@@ -519,9 +529,12 @@
             From my observations, Microsoft To-do’s small checkbox hitbox may
             negatively impact users with motor impairments who rely on touch
             input, while Hades' multimodal feedback (audio, visual, haptic) will
-            significantly benefit users with various impairments. Similarly,
-            Google Forms' lack of obvious keyboard focus indicators may create
-            barriers for visually impaired users relying on keyboard navigation.
+            significantly benefit users with various impairments. However, this
+            is contrasted by the fact that the screen reader does not work with
+            Hades, although an RPG video game was likely not accessible to
+            visually impaired users in the first place. Similarly, Google Forms'
+            lack of obvious keyboard focus indicators may create barriers for
+            visually impaired users relying on keyboard navigation.
           </p>
 
           <p>
