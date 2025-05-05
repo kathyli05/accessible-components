@@ -1,139 +1,561 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Accessible Components Assignment</title>
-    <link rel="stylesheet" href="styles.css">
-</head>
-<body>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Accessible Component Redesign</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
     <header>
-        <h1>CSCI1300 Case Study: Checkboxes!</h1>
-        <nav>
-            <ul>
-                <li><a href="#part1">Part 1: Input</a></li>
-                <li><a href="#part2">Part 2: Output</a></li>
-                <li><a href="#part3">Part 3: State Models & Redesign</a></li>
-                <li><a href="#part4">Part 4: Reflection</a></li>
-            </ul>
-        </nav>
+      <h1>Checkboxes and Accessibility - A Case Study</h1>
+      <nav>
+        <ul>
+          <li><a href="#introduction">Introduction</a></li>
+          <li><a href="#inputs">Input Interactions</a></li>
+          <li><a href="#outputs">Output Feedback</a></li>
+          <li><a href="#models">State Models</a></li>
+          <li><a href="#redesign">Component Redesign</a></li>
+          <li><a href="#reflection">Reflection</a></li>
+        </ul>
+      </nav>
     </header>
 
     <main>
-        <section id="part1">
-            <h2>Part 1: Input</h2>
-            <p>yassss/p>
+      <section id="introduction">
+        <h2>Introduction</h2>
+        <p>
+          As our world becomes increasingly digital and user interface design
+          becomes more complex, it is important that
+          <b>all interfaces be designed with accessibility in mind</b>. However,
+          many web components (e.g. buttons, dropdowns, checkboxes) are not
+          equally accessible for users on different devices and with different
+          physical/mental needs.
+        </p>
+        <p>
+          This motivated me to investigate <b>checkboxes</b> - a seemingly
+          simple but deceptively nuanced UI component - and investigate how
+          their inputs and outputs vary across three different platforms. With
+          these insights, I then redesigned one of the platform's checkboxes to
+          better account for <b>inclusive and intuitive design</b>.
+        </p>
+        <p>A few notes:</p>
+        <div class="text-box">
+          <ul>
+            <li>
+              I use a Thinkpad X14 Carbon and an iPhone 14 for the mobile
+              versions. For my laptop browser, I use Google Chrome, and mobile
+              browser, I use Safari.
+            </li>
+            <li>
+              I use the word "toggle" to describe the checking or unchecking of
+              a checkbox.
+            </li>
+          </ul>
+        </div>
+      </section>
 
-            <h3>Google Forms Checkboxes</h3>
-            <table>
-                <tr>
-                    <th>Interaction Type</th>
-                    <th>Observations</th>
-                </tr>
-                <tr>
-                    <td>Mouse</td>
-                    <td>yas</td>
-                </tr>
-                <tr>
-                    <td>Keyboard</td>
-                    <td>yas</td>
-                </tr>
-                <tr>
-                    <td>Mobile</td>
-                    <td>yas</td>
-                </tr>
-            </table>
+      <section id="applications">
+        <h2>Applications Overview</h2>
+        <p>
+          I chose to investigate three platforms for my case study - Google
+          Forms, Microsoft To-do, and the video game Hades. These three
+          platform's checkboxes are all used in different contexts, which I
+          figured was useful in comparing their usability.
+        </p>
 
-            <h3>Microsoft To-Do Checkboxes</h3>
-            <table>
-                <tr>
-                    <th>Interaction Type</th>
-                    <th>Observations</th>
-                </tr>
-                <tr>
-                    <td>Mouse</td>
-                    <td>yas</td>
-                </tr>
-                <tr>
-                    <td>Keyboard</td>
-                    <td>yas</td>
-                </tr>
-                <tr>
-                    <td>Mobile</td>
-                    <td>yas</td>
-                </tr>
-            </table>
+        <p>
+          Below, I have included images of the checkboxes as they appear in each
+          application.
+        </p>
+        <div class="text-box">
+          <ul>
+            <b>Note: </b
+            >Each diagram represents the typical user flow of going from an
+            unchecked to checked checkbox. For concision's sake, I did not
+            include going from a checked to unchecked textbox - imagine the
+            arrows reversed.
+          </ul>
+        </div>
 
-            <h3>Hades Settings Checkboxes</h3>
-            <table>
-                <tr>
-                    <th>Interaction Type</th>
-                    <th>Observations</th>
-                </tr>
-                <tr>
-                    <td>Mouse</td>
-                    <td>yas</td>
-                </tr>
-                <tr>
-                    <td>Keyboard</td>
-                    <td>yas</td>
-                </tr>
-                <tr>
-                    <td>Mobile</td>
-                    <td>yas</td>
-                </tr>
-            </table>
-        </section>
+        <h3 id="google-forms">Google Forms</h3>
+        <figure>
+          <img src="images/forms.svg" alt="Google Forms checkbox example" />
+          <figcaption>
+            Checkbox interaction in Google Forms. Note that the hover indicator
+            is quite faint.
+          </figcaption>
+        </figure>
+        <p>
+          Google Forms uses simple visual indicators and allows clicking on both
+          the box and associated label. However, keyboard navigation is
+          inconsistent and lacks proper focus feedback.
+        </p>
 
-        <section id="part2">
-            <h2>Part 2: Output</h2>
-            <p>yasssss</p>
+        <h3 id="microsoft-todo">Microsoft To-Do</h3>
+        <figure>
+          <img src="images/msft.svg" alt="Microsoft To-Do checkbox example" />
+          <figcaption>Checkbox interaction in Microsoft To-Do</figcaption>
+        </figure>
+        <p>
+          Microsoft To-Do provides clear visual and auditory feedback. However,
+          accessibility support and general usability worsens for non-mouse
+          users.
+        </p>
 
-            <table>
-                <tr>
-                    <th>Component</th>
-                    <th>State</th>
-                    <th>Visual Cues</th>
-                    <th>Keyboard Cues</th>
-                    <th>Other Outputs</th>
-                </tr>
-                <tr>
-                    <td>Google Forms</td>
-                    <td>Unchecked</td>
-                    <td>yas</td>
-                    <td>yas</td>
-                    <td>yas</td>
-                </tr>
-                <tr>
-                    <td>Microsoft To-Do</td>
-                    <td>Unchecked</td>
-                    <td>yas</td>
-                    <td>yas</td>
-                    <td>yas</td>
-                </tr>
-                <tr>
-                    <td>Hades</td>
-                    <td>Unchecked</td>
-                    <td>yas</td>
-                    <td>yas</td>
-                    <td>yas</td>
-                </tr>
-            </table>
-        </section>
+        <h3 id="hades-settings">Hades Settings</h3>
+        <figure>
+          <img src="images/hades.svg" alt="Hades settings checkbox example" />
+          <figcaption>Checkbox interaction in Hades settings menu</figcaption>
+        </figure>
+        <p>
+          The Hades game settings offer multimodal feedback - visual, audio, and
+          haptics - but keyboard accessibility is inconsistent, with confusing
+          arrow-key navigation and no visible focus cues.
+        </p>
+      </section>
 
-        <section id="part3">
-            <h2>Part 3: State Models & Redesign</h2>
-            <p>AHHHHH</p>
-        </section>
+      <section id="inputs">
+        <h2>Input Interactions</h2>
+        <p>
+          After a basic test of each component and understood the various states
+          each component could be used in, I further investigated each
+          component's inputs and how they performed in four key aspects of good
+          UI design: learnability, memorability, efficiency, and accessibility.
+          When interacting with a checkbox, inputs refer to the different ways a
+          user can engage with the component, such as clicking with a mouse,
+          using keyboard shortcuts, or tapping on a touchscreen. Thus, I
+          explored how users interact with each applications' checkboxes across
+          mouse, keyboard, and mobile inputs.
+        </p>
 
-        <section id="part4">
-            <h2>Part 4: Reflection</h2>
-            <p>errrrrr</p>
-        </section>
+        <table>
+          <thead>
+            <tr>
+              <th>Application</th>
+              <th>Mouse</th>
+              <th>Keyboard</th>
+              <th>Touch</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Google Forms</td>
+              <td>
+                <li>
+                  Clicking both label and box toggles checkbox,
+                  <b>increasing efficiency.</b>
+                </li>
+                <li>
+                  Hover on checkbox reveals faint indicator and changes cursor
+                  to pointer. Hover on label does nothing.
+                  <b> Less learnable</b> for users who don't know they can click
+                  the label.
+                </li>
+                <li>
+                  Toggling occurs on mouse release, not click. Highlighting text
+                  may accidentally toggle, <b>reducing efficiency.</b>
+                </li>
+              </td>
+              <td>
+                <li>
+                  Tab only focuses checkbox; Space toggles. Enter does nothing,
+                  breaking convention and
+                  <b>reducing learnability</b>.
+                </li>
+                <li>
+                  Cannot use arrow keys to move between options. If you tab too
+                  far, you have to cycle through the entire form,
+                  <b>reducing efficiency</b>.
+                </li>
+                <li>
+                  No keyboard-specific focus indicator,
+                  <b>reducing memorability</b>.
+                </li>
+              </td>
+              <td>
+                <li>Small tap targets <b>reduce efficiency</b>.</li>
+                <li>
+                  Tapping label also toggles selection, consistent with desktop.
+                  <b>Increases memorability</b>.
+                </li>
+              </td>
+            </tr>
+            <tr>
+              <td>Microsoft To-Do</td>
+              <td>
+                <li>
+                  Only the checkbox is clickable; clicking the label opens
+                  another window. Not intuitive,
+                  <b>reduces learnability.</b> The checkbox is also a small
+                  target,
+                  <b>reducing efficiency.</b>
+                </li>
+                <li>
+                  Text cannot be selected; click-and-drag is reserved for
+                  reordering checkbox options. This functionality is also
+                  mouse-only.
+                </li>
+                <li>
+                  Hover on both checkbox and the label highlight the checkbox
+                  and the frame surrounding the two,
+                  <b>increasing memorability</b>.
+                </li>
+              </td>
+              <td>
+                <li>Can tab through both checkbox and text.</li>
+                <li>
+                  Both Space and Enter on a checkbox toggle. Arrow keys move to
+                  the previous/next option, <b>increasing efficiency.</b>
+                </li>
+                <li>
+                  Cannot tab through multiple checkbox options in sequence -
+                  focus disappears after text label,
+                  <b>disrupting efficiency.</b>
+                </li>
+              </td>
+              <td>
+                <li>Cannot reorder tasks via drag-and-drop like on desktop.</li>
+                <li>
+                  Checkbox hitbox is very small, <b>hurting efficiency.</b>
+                </li>
+                <li>Cannot toggle by tapping label.</li>
+              </td>
+            </tr>
+            <tr>
+              <td>Hades Settings</td>
+              <td>
+                <li>
+                  Can toggle by clicking on both checkbox and label,
+                  <b>increasing efficiency. However, cursor does not change.</b>
+                </li>
+                <li>
+                  Unlike other applications, hovering over both checkbox and
+                  label provide feedback - audio and visual cues occur.
+                  <b>Increases learnability and memorability.</b>
+                </li>
+                <li>
+                  A tooltip appears on hover to explain the label,
+                  <b>great for learnability.</b>
+                </li>
+              </td>
+              <td>
+                <li>
+                  Uses arrow keys or WASD to move focus; reflects typical gaming
+                  controls and <b>increases memorability</b>, but may reduce
+                  <b>learnability</b>.
+                </li>
+                <li>Space/Enter toggles the checkbox.</li>
+                <li>No visible focus outline.</li>
+                <li>
+                  Focus changes unexpected - vertical and horizontal transitions
+                  are not consistent. Arrow key movement occasionally loops
+                  depending on the option. This
+                  <b>reduces efficiency, memorability, and learnability.</b>
+                </li>
+              </td>
+              <td>
+                <li>
+                  Tapping either checkbox or label toggles,
+                  <b>improving efficiency.</b>
+                </li>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+        <table>
+          <thead>
+            <tr>
+              <th>Application</th>
+              <th>Accessibility</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Microsoft To-Do</td>
+              <td>
+                <b>Least accessible for input.</b> Only the small checkbox can
+                be toggled; the label is not clickable, which limits efficiency
+                for users with motor disabilities. Drag-and-drop is only
+                available via mouse, with no equivalent on keyboard or touch.
+                Tabbing through tasks is inconsistent—focus disappears after
+                some interactions. No way to access the custom right-click menu
+                using the keyboard, which creates a functionality gap for
+                non-mouse users.
+              </td>
+            </tr>
+
+            <tr>
+              <td>Google Forms</td>
+              <td>
+                <b>More accessible.</b> Simple interface and visual identity
+                helps prevent sensory overload. Keyboard navigation is OK - only
+                one way to traverse through and toggle labels. Users can click
+                both the label and checkbox to toggle selection, increasing tap
+                target size.
+              </td>
+            </tr>
+            <tr>
+              <td>Hades Settings</td>
+              <td>
+                <b>Most accessible.</b> Supports multiple input modes with
+                consistent behavior across all. Both labels and checkboxes are
+                clickable. Though arrow key navigation can be inconsistent at
+                times, the redundancy of input options, immediate feedback upon
+                input, and large tap/click areas make it easier for users across
+                a range of abilities.
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </section>
+
+      <section id="outputs">
+        <h2>Output Feedback</h2>
+        <p>
+          When a user interacts with a checkbox, the component should provide
+          clear output signals to reflect its current state. These outputs serve
+          as confirmation of an action and are essential for usability and
+          accessibility. Outputs can include visual indicators, auditory cues,
+          or haptic feedback. They may also be more subtly implemented, such as
+          screen reader announcements or focus outlines. Thus, I proceeded by
+          analyzing the outputs for each application.
+        </p>
+
+        <table>
+          <thead>
+            <tr>
+              <th>Application</th>
+              <th>Visual Feedback</th>
+              <th>Auditory Feedback</th>
+              <th>Other Feedback</th>
+              <th>Focus Order</th>
+              <th>Screen Reader Output</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Google Forms</td>
+              <td>
+                Faint circle appears around box on focus and hover; checkmark +
+                animation appears when selected.
+              </td>
+              <td>None.</td>
+              <td>None.</td>
+              <td>
+                Focus order makes sense - pressing tab navigates through each
+                option (checkbox + text) from top to bottom, but no way to go
+                back easily. No visual label highlight.
+              </td>
+              <td>Poor.</td>
+            </tr>
+
+            <tr>
+              <td>Microsoft To-Do</td>
+              <td>
+                Hover highlights checkbox and task row. Checkmark appears with
+                animation; text is strikethrough-ed. Focus outline on tab,
+                though inconsistently applied.
+              </td>
+              <td>A "ding" sound plays when checked.</td>
+              <td>None.</td>
+              <td>
+                Focus order is fragmented. Can tab to checkbox and text, but
+                loses focus after task text; not all options are reachable.
+              </td>
+              <td>Some screen reader announcements for task state</td>
+            </tr>
+            <tr>
+              <td>Hades Settings</td>
+              <td>
+                Text turns yellow, and checkbox glows when hovered or focused.
+                Tooltip appears to explain label. Circle appears when checked.
+                No keyboard focus outline.
+              </td>
+              <td>“Thunk” and “swoosh” sounds for check/uncheck.</td>
+              <td>
+                Vibrates when checked on mobile! Feedback consistent across
+                input types.
+              </td>
+              <td>
+                Inconsistent. Navigation loops in some areas and skips others.
+                No visible outline on keyboard focus.
+              </td>
+              <td>ur mom</td>
+            </tr>
+          </tbody>
+        </table>
+      </section>
+
+      <section id="models">
+        <h2>State Models</h2>
+        <p>
+          To better understand the behaviors and limitations of checkbox
+          components, I created state models that illustrate how users interact
+          with the Google Forms checkbox using two different input methods:
+          mouse and keyboard. These diagrams reflect the key states - such as
+          hovered, focused, and checked/unchecked - and the transitions
+          triggered by user actions like clicking and tabbing.
+        </p>
+        <figure>
+          <img
+            src="images/Untitled presentation.svg"
+            alt="Mouse input state model"
+          />
+          <figcaption>Figure 3: Mouse input state model</figcaption>
+        </figure>
+
+        <figure>
+          <img
+            src="images/Untitled presentation (1).svg"
+            alt="Keyboard input state model"
+          />
+          <figcaption>Figure 4: Keyboard input state model</figcaption>
+        </figure>
+
+        <h3>Redesign</h3>
+        <p>
+          Visualizing the interaction flow with these models helped me identify
+          usability and accessibility issues. Thus, I chose to change one aspect
+          of the component to address these issues -
+          <b
+            >adding a clearer hover/focus indicator to the entire checkbox and
+            its label.</b
+          >
+          Previously, only the checkbox itself had an indicator, with a much
+          lighter color. <b>This was an intentional trade-off </b>I made,
+          affecting learnability, memorability, efficiency, and accessibility
+          for mouse and keyboard users.
+        </p>
+        <p>Here are the revised state models after implementing this change:</p>
+
+        <figure>
+          <img
+            src="images/Untitled presentation (2).svg"
+            alt="Mouse input state model"
+          />
+          <figcaption>
+            Revised mouse input state model. Change in red.
+          </figcaption>
+        </figure>
+
+        <figure>
+          <img
+            src="images/Untitled presentation (3).svg"
+            alt="Keyboard input state model"
+          />
+          <figcaption>
+            Revised keyboard input state model. Change in red.
+          </figcaption>
+        </figure>
+      </section>
+
+      <section id="redesign">
+        <h2>Figma Redesign</h2>
+
+        <p>
+          After creating my revised state models, I implemented my change
+          <b>for mouse users</b>
+          visually by recreating the Google Forms checkboxes in Figma and
+          replacing the current focus indicator with my design. Below is the new
+          user flow.
+        </p>
+
+        <figure>
+          <img src="images/Frame 3.svg" />
+          <figcaption>
+            Default state of the Google Forms checkbox. No change; placed for
+            context.
+          </figcaption>
+        </figure>
+
+        <div class="figure-row">
+          <figure>
+            <img
+              src="images/original.svg"
+              alt="Current hovered/focused state"
+            />
+            <figcaption>
+              Current hovered/focused state of the Google Forms checkbox.
+            </figcaption>
+          </figure>
+
+          <figure>
+            <img
+              src="images/chnaged.svg"
+              alt="Redesigned hovered/focused state"
+            />
+            <figcaption>
+              <b
+                >My redesigned hovered/focused state of the Google Forms
+                checkbox.</b
+              >
+            </figcaption>
+          </figure>
+        </div>
+        <figure>
+          <img src="images/Frame 5.svg" />
+          <figcaption>
+            Checked state of the Google Forms checkbox. No change; placed for
+            context.
+          </figcaption>
+        </figure>
+      </section>
+
+      <section id="reflection">
+        <h2>Reflection</h2>
+        <div class="text-box">
+          <p>
+            My design addresses two accessibility gaps: the almost-hidden
+            hover/focus indicator in Google Forms mouse/keyboard navigation and
+            the lack of visual alignment between interactive areas and visual
+            feedback. This change solves the "mismatch" described by Kat
+            Holmes—there is a disconnect between the ability to interact with
+            the entire label row and the visual indicator that only appears on
+            hover/focus, creating unnecessary precision challenges for users.
+          </p>
+
+          <p>
+            From my observations, Microsoft To-do’s small checkbox hitbox may
+            negatively impact users with motor impairments who rely on touch
+            input, while Hades' multimodal feedback (audio, visual, haptic) will
+            significantly benefit users with various impairments. Similarly,
+            Google Forms' lack of obvious keyboard focus indicators may create
+            barriers for visually impaired users relying on keyboard navigation.
+          </p>
+
+          <p>
+            In component design, it seems that mouse users are most commonly
+            prioritized, followed by touch/mobile, and then followed by keyboard
+            users. This hierarchy impacts accessibility - keyboard users
+            frequently encounter minimal focus indicators and inconsistent focus
+            navigation, touch users face small targets, and screen reader users
+            may receive inconsistent announcements. This may be frustrating and
+            leave them with an incomplete experience. My redesign attempts to
+            rebalance this by improving visibility for all input methods without
+            adding complexity.
+          </p>
+        </div>
+      </section>
+
+      <section id="conclusion">
+        <h2>Conclusion</h2>
+        <p>
+          I learned a lot about accessible design through my analysis and
+          redesign of the checkbox component. For one, I've realized how
+          important it is to account for
+          <b>learnability, memorability, and efficiency</b> when designing
+          interfaces. Additionally, I've realized that these small usability
+          issues such as a faint hover indicator or non-multimodal forms of
+          feedback <b>affect all users of all abilities</b>, not just a specific
+          group. Ultimately, accessibility is not about perfection (as seen
+          through the tradeoff I made), but rather
+          <b>intention and careful design</b>.
+        </p>
+      </section>
+      <footer>
+        <p>Checkbox Redesign Case Study - by Kathy Li :)</p>
+      </footer>
     </main>
-
-    <footer>
-        <p>Accessible Components Assignment - Created by Kathy Li <3</p>
-    </footer>
-</body>
+  </body>
 </html>
