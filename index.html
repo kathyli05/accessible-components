@@ -412,7 +412,12 @@
             src="images/Untitled presentation.svg"
             alt="Mouse input state model"
           />
-          <figcaption>Figure 3: Mouse input state model</figcaption>
+          <figcaption>
+            Mouse input state model. Note that this seems unintuitive, but the
+            state immediately after checking or unchecking is actually the Hover
+            state in Google Forms - the hover outline remains even if the user
+            is no longer directly interacting with the checkbox.
+          </figcaption>
         </figure>
 
         <figure>
@@ -420,7 +425,7 @@
             src="images/Untitled presentation (1).svg"
             alt="Keyboard input state model"
           />
-          <figcaption>Figure 4: Keyboard input state model</figcaption>
+          <figcaption>Keyboard input state model</figcaption>
         </figure>
 
         <h3>Redesign</h3>
@@ -510,6 +515,11 @@
             context.
           </figcaption>
         </figure>
+        <p>
+          I learned through the redesign that all design choices will have
+          tradeoffs, and choosing the right one may depend on what user group
+          you decide to prioritize.
+        </p>
       </section>
 
       <section id="reflection">
@@ -520,27 +530,48 @@
             hover/focus indicator in Google Forms mouse/keyboard navigation and
             the lack of visual alignment between interactive areas and visual
             feedback. This change solves the "mismatch" described by Kat Holmes
-            - there is a disconnect between the ability to interact with the
-            entire label row and the visual indicator that only appears on
-            hover/focus, creating unnecessary precision challenges for users.
+            -
+            <b
+              >there is a disconnect between the ability to interact with the
+              entire label row and the visual indicator that only appears on
+              hover/focus</b
+            >, creating unnecessary precision challenges for users.
           </p>
+        </div>
+        <div class="text-box">
+          <p>Per my observations:</p>
+          <ul>
+            <li>
+              Microsoft To-do’s small checkbox hitbox may negatively impact
+              users with motor impairments who rely on touch input
+            </li>
+            <br />
+            <li>
+              Hades' multimodal feedback (audio, visual, haptic) will
+              significantly benefit users with various impairments
+            </li>
+            <br />
 
-          <p>
-            From my observations, Microsoft To-do’s small checkbox hitbox may
-            negatively impact users with motor impairments who rely on touch
-            input, while Hades' multimodal feedback (audio, visual, haptic) will
-            significantly benefit users with various impairments. However, this
-            is contrasted by the fact that the screen reader does not work with
-            Hades, although an RPG video game was likely not accessible to
-            visually impaired users in the first place. Similarly, Google Forms'
-            lack of obvious keyboard focus indicators may create barriers for
-            visually impaired users relying on keyboard navigation.
-          </p>
+            <li>
+              However, this is contrasted by the fact that the screen reader
+              does not work with Hades, although an RPG video game was likely
+              not accessible to visually impaired users in the first place
+            </li>
+            <br />
 
+            <li>
+              Similarly, Google Forms' lack of obvious keyboard focus indicators
+              may create barriers for visually impaired users relying on
+              keyboard navigation.
+            </li>
+          </ul>
+        </div>
+        <div class="text-box">
           <p>
-            In component design, it seems that mouse users are most commonly
-            prioritized, followed by touch/mobile, and then followed by keyboard
-            users. This hierarchy impacts accessibility - keyboard users
+            In component design, it seems that
+            <b>mouse users are most commonly prioritized</b>, followed by
+            touch/mobile, and then followed by keyboard users.
+            <b>This hierarchy impacts accessibility</b> - keyboard users
             frequently encounter minimal focus indicators and inconsistent focus
             navigation, touch users face small targets, and screen reader users
             may receive inconsistent announcements. This may be frustrating and
