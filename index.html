@@ -264,7 +264,7 @@
             </tr>
           </tbody>
         </table>
-        <table>
+        <table class="input-table">
           <thead>
             <tr>
               <th>Application</th>
@@ -273,38 +273,68 @@
           </thead>
           <tbody>
             <tr>
-              <td>Microsoft To-Do</td>
+              <td><strong>Microsoft To-Do</strong></td>
               <td>
-                <b>Least accessible for input.</b> Only the small checkbox can
-                be toggled; the label is not clickable, which limits efficiency
-                for users with motor disabilities. Drag-and-drop is only
-                available via mouse, with no equivalent on keyboard or touch.
-                Tabbing through tasks is inconsistent - focus disappears after
-                some interactions. No way to access the custom right-click menu
-                using the keyboard, which creates a functionality gap for
-                non-mouse users.
+                <p><strong>Least accessible for input.</strong></p>
+                <ul>
+                  <li>
+                    Only the small checkbox can be toggled; the label is not
+                    clickable, which limits efficiency for users with motor
+                    disabilities.
+                  </li>
+                  <li>
+                    Drag-and-drop is only available via mouse, with no
+                    equivalent on keyboard or touch.
+                  </li>
+                  <li>
+                    Tabbing through tasks is inconsistent — focus disappears
+                    after some interactions.
+                  </li>
+                  <li>
+                    No way to access the custom right-click menu using the
+                    keyboard, which creates a functionality gap for non-mouse
+                    users.
+                  </li>
+                </ul>
               </td>
             </tr>
-
             <tr>
-              <td>Google Forms</td>
+              <td><strong>Google Forms</strong></td>
               <td>
-                <b>More accessible.</b> Simple interface and visual identity
-                helps prevent sensory overload. Keyboard navigation is OK - only
-                one way to traverse through and toggle labels. Users can click
-                both the label and checkbox to toggle selection, increasing tap
-                target size.
+                <p><strong>More accessible.</strong></p>
+                <ul>
+                  <li>
+                    Simple interface and visual identity helps prevent sensory
+                    overload.
+                  </li>
+                  <li>
+                    Keyboard navigation is OK — only one way to traverse through
+                    and toggle labels.
+                  </li>
+                  <li>
+                    Users can click both the label and checkbox to toggle
+                    selection, increasing tap target size.
+                  </li>
+                </ul>
               </td>
             </tr>
             <tr>
-              <td>Hades Settings</td>
+              <td><strong>Hades Settings</strong></td>
               <td>
-                <b>Most accessible.</b> Supports multiple input modes with
-                consistent behavior across all. Both labels and checkboxes are
-                clickable. Though arrow key navigation can be inconsistent at
-                times, the redundancy of input options, immediate feedback upon
-                input, and large tap/click areas make it easier for users across
-                a range of abilities.
+                <p><strong>Most accessible.</strong></p>
+                <ul>
+                  <li>
+                    Supports multiple input modes with consistent behavior
+                    across all.
+                  </li>
+                  <li>Both labels and checkboxes are clickable.</li>
+                  <li>
+                    Though arrow key navigation can be inconsistent at times,
+                    the redundancy of input options, immediate feedback upon
+                    input, and large tap/click areas make it easier for users
+                    across a range of abilities.
+                  </li>
+                </ul>
               </td>
             </tr>
           </tbody>
@@ -323,7 +353,7 @@
           analyzing the outputs for each application.
         </p>
 
-        <table>
+        <table class="input-table">
           <thead>
             <tr>
               <th>Application</th>
@@ -336,62 +366,125 @@
           </thead>
           <tbody>
             <tr>
-              <td>Google Forms</td>
+              <td><strong>Google Forms</strong></td>
               <td>
-                Faint circle appears around box on focus and hover; checkmark +
-                animation appears when selected.
-              </td>
-              <td>None.</td>
-              <td>None.</td>
-              <td>
-                Focus order makes sense - pressing tab navigates through each
-                option (checkbox + text) from top to bottom, but no way to go
-                back easily. No visual label highlight.
+                <ul>
+                  <li>Faint circle appears around box on focus and hover</li>
+                  <li>Checkmark + animation appears when selected</li>
+                </ul>
               </td>
               <td>
-                Reads out the entire label and then "unchecked" or "checked".
-                However, state changes are NOT narrated - only the initial state
-                is read out loud.
+                <ul>
+                  <li>None</li>
+                </ul>
+              </td>
+              <td>
+                <ul>
+                  <li>None</li>
+                </ul>
+              </td>
+              <td>
+                <ul>
+                  <li>
+                    Focus order makes sense – tab navigates top to bottom
+                    (checkbox + text)
+                  </li>
+                  <li>No way to go back easily</li>
+                  <li>No visual label highlight</li>
+                </ul>
+              </td>
+              <td>
+                <ul>
+                  <li>Reads out full label and "unchecked"/"checked"</li>
+                  <li>
+                    <strong>State changes are NOT narrated</strong> – only
+                    initial state is read
+                  </li>
+                </ul>
               </td>
             </tr>
 
             <tr>
-              <td>Microsoft To-Do</td>
+              <td><strong>Microsoft To-Do</strong></td>
               <td>
-                Hover highlights checkbox and task row. Checkmark appears with
-                animation; text is strikethrough-ed. Focus outline on tab,
-                though inconsistently applied.
-              </td>
-              <td>A "ding" sound plays when checked.</td>
-              <td>None.</td>
-              <td>
-                Focus order is fragmented. Can tab to checkbox and text, but
-                loses focus after task text; not all options are reachable.
+                <ul>
+                  <li>Hover highlights checkbox and task row</li>
+                  <li>Checkmark appears with animation</li>
+                  <li>Text is strikethrough-ed</li>
+                  <li>Focus outline appears on tab (inconsistently applied)</li>
+                </ul>
               </td>
               <td>
-                Nearly impossible to use - could not change scren reader
-                attention to task, could not change focus. Had to close and
-                reopen window multiple times. When working, reads "Task list
-                ____, more options available, unselected".
+                <ul>
+                  <li>A “ding” sound plays when checked</li>
+                </ul>
+              </td>
+              <td>
+                <ul>
+                  <li>None</li>
+                </ul>
+              </td>
+              <td>
+                <ul>
+                  <li>Focus order is fragmented</li>
+                  <li>
+                    Can tab to checkbox and text, but loses focus after task
+                    text
+                  </li>
+                  <li>Not all options are reachable</li>
+                </ul>
+              </td>
+              <td>
+                <ul>
+                  <li>
+                    Nearly impossible to use – screen reader couldn't focus on
+                    task
+                  </li>
+                  <li>Had to close and reopen window multiple times</li>
+                  <li>
+                    When working, reads: “Task list [name], more options
+                    available, unselected”
+                  </li>
+                </ul>
               </td>
             </tr>
+
             <tr>
-              <td>Hades Settings</td>
+              <td><strong>Hades Settings</strong></td>
               <td>
-                Text turns yellow, and checkbox glows when hovered or focused.
-                Tooltip appears to explain label. Circle appears when checked.
-                No keyboard focus outline.
+                <ul>
+                  <li>Text turns yellow when hovered or focused</li>
+                  <li>Checkbox glows</li>
+                  <li>Tooltip appears to explain label</li>
+                  <li>Circle appears when checked</li>
+                  <li><strong>No keyboard focus outline</strong></li>
+                </ul>
               </td>
-              <td>“Thunk” and “swoosh” sounds for check/uncheck.</td>
               <td>
-                Vibrates when checked on mobile! Feedback consistent across
-                input types.
+                <ul>
+                  <li>“Thunk” and “swoosh” sounds for check/uncheck</li>
+                </ul>
               </td>
               <td>
-                Inconsistent. Navigation loops in some areas and skips others.
-                No visible outline on keyboard focus.
+                <ul>
+                  <li>Vibrates when checked on mobile</li>
+                  <li>Feedback consistent across input types</li>
+                </ul>
               </td>
-              <td>Did not work; "no item in view".</td>
+              <td>
+                <ul>
+                  <li>
+                    Inconsistent – navigation loops in some areas and skips
+                    others
+                  </li>
+                  <li>No visible outline on keyboard focus</li>
+                </ul>
+              </td>
+              <td>
+                <ul>
+                  <li>Did not work; "no item in view"</li>
+                </ul>
+              </td>
             </tr>
           </tbody>
         </table>
@@ -525,12 +618,14 @@
       <section id="reflection">
         <h2>Reflection</h2>
         <div class="text-box">
+          <h3>🧩 Addressing a design mismatch</h3>
+
           <p>
             My design addresses two accessibility gaps: the almost-hidden
             hover/focus indicator in Google Forms mouse/keyboard navigation and
             the lack of visual alignment between interactive areas and visual
-            feedback. This change solves the "mismatch" described by Kat Holmes
-            -
+            feedback. This change solves the "mismatch" described by designer
+            Kat Holmes -
             <b
               >there is a disconnect between the ability to interact with the
               entire label row and the visual indicator that only appears on
@@ -539,6 +634,8 @@
           </p>
         </div>
         <div class="text-box">
+          <h3>🔍 Key observations</h3>
+
           <p>Per my observations:</p>
           <ul>
             <li>
@@ -567,6 +664,8 @@
           </ul>
         </div>
         <div class="text-box">
+          <h3>⚖️ Which users are prioritized?</h3>
+
           <p>
             In component design, it seems that
             <b>mouse users are most commonly prioritized</b>, followed by
